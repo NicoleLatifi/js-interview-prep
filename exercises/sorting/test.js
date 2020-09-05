@@ -12,19 +12,19 @@ function getSortedArray() {
   return [-124, -40, 0, 7, 21, 100, 500];
 }
 
-describe('Bubble sort', () => {
+describe.skip('Bubble sort', () => {
   test('sorts an array', () => {
     expect(bubbleSort(getArray())).toEqual(getSortedArray());
   });
 });
 
-describe('Selection sort', () => {
+describe.skip('Selection sort', () => {
   test('sorts an array', () => {
     expect(selectionSort(getArray())).toEqual(getSortedArray());
   });
 });
 
-describe('Merge sort', () => {
+describe.skip('Merge sort', () => {
   test('merge function can join together two sorted arrays', () => {
     const left = [1, 10];
     const right = [2, 8, 12];

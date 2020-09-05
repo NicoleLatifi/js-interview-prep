@@ -1,7 +1,7 @@
 const Node = require('./node');
 const validate = require('./index');
 
-test('Validate recognizes a valid BST', () => {
+test.skip('Validate recognizes a valid BST', () => {
   const n = new Node(10);
   n.insert(5);
   n.insert(15);
@@ -11,7 +11,7 @@ test('Validate recognizes a valid BST', () => {
   expect(validate(n)).toEqual(true);
 });
 
-test('Validate recognizes an invalid BST', () => {
+test.skip('Validate recognizes an invalid BST', () => {
   const n = new Node(10);
   n.insert(5);
   n.insert(15);

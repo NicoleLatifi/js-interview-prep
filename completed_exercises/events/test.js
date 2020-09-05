@@ -1,6 +1,6 @@
 const Events = require('./index');
 
-test('Events can be registered then triggered', () => {
+test.skip('Events can be registered then triggered', () => {
   const events = new Events();
 
   const cb1 = jest.fn();
@@ -11,7 +11,7 @@ test('Events can be registered then triggered', () => {
   expect(cb1.mock.calls.length).toBe(1);
 });
 
-test('Multiple events can be registered then triggered', () => {
+test.skip('Multiple events can be registered then triggered', () => {
   const events = new Events();
 
   const cb1 = jest.fn();
@@ -25,7 +25,7 @@ test('Multiple events can be registered then triggered', () => {
   expect(cb2.mock.calls.length).toBe(1);
 });
 
-test('Events can be triggered multiple times', () => {
+test.skip('Events can be triggered multiple times', () => {
   const events = new Events();
 
   const cb1 = jest.fn();
@@ -41,7 +41,7 @@ test('Events can be triggered multiple times', () => {
   expect(cb2.mock.calls.length).toBe(2);
 });
 
-test('Events can have different names', () => {
+test.skip('Events can have different names', () => {
   const events = new Events();
 
   const cb1 = jest.fn();
@@ -57,7 +57,7 @@ test('Events can have different names', () => {
   expect(cb2.mock.calls.length).toBe(1);
 });
 
-test('Events can be toggled off', () => {
+test.skip('Events can be toggled off', () => {
   const events = new Events();
 
   const cb1 = jest.fn();

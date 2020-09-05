@@ -3,11 +3,11 @@ const L = require('./linkedlist');
 const List = L.LinkedList;
 const Node = L.Node;
 
-test('circular function is defined', () => {
+test.skip('circular function is defined', () => {
   expect(typeof circular).toEqual('function');
 });
 
-test('circular detects circular linked lists', () => {
+test.skip('circular detects circular linked lists', () => {
   const l = new List();
   const a = new Node('a');
   const b = new Node('b');
@@ -21,7 +21,7 @@ test('circular detects circular linked lists', () => {
   expect(circular(l)).toEqual(true);
 });
 
-test('circular detects circular linked lists linked at the head', () => {
+test.skip('circular detects circular linked lists linked at the head', () => {
   const l = new List();
   const a = new Node('a');
   const b = new Node('b');
@@ -35,7 +35,7 @@ test('circular detects circular linked lists linked at the head', () => {
   expect(circular(l)).toEqual(true);
 });
 
-test('circular detects non-circular linked lists', () => {
+test.skip('circular detects non-circular linked lists', () => {
   const l = new List();
   const a = new Node('a');
   const b = new Node('b');

@@ -3,24 +3,24 @@ const Node = T.Node;
 const Tree = T.Tree;
 
 describe('Node', () => {
-  test('Node is a constructor', () => {
+  test.skip('Node is a constructor', () => {
     expect(typeof Node.prototype.constructor).toEqual('function');
   });
 
-  test('Node has a data and children properties', () => {
+  test.skip('Node has a data and children properties', () => {
     const n = new Node('a');
     expect(n.data).toEqual('a');
     expect(n.children.length).toEqual(0);
   });
 
-  test('Node can add children', () => {
+  test.skip('Node can add children', () => {
     const n = new Node('a');
     n.add('b');
     expect(n.children.length).toEqual(1);
     expect(n.children[0].children).toEqual([]);
   });
 
-  test('Node can remove children', () => {
+  test.skip('Node can remove children', () => {
     const n = new Node('a');
     n.add('b');
     expect(n.children.length).toEqual(1);
@@ -30,12 +30,12 @@ describe('Node', () => {
 });
 
 describe('Tree', () => {
-  test('starts empty', () => {
+  test.skip('starts empty', () => {
     const t = new Tree();
     expect(t.root).toEqual(null);
   });
 
-  test('Can traverse bf', () => {
+  test.skip('Can traverse bf', () => {
     const letters = [];
     const t = new Tree();
     t.root = new Node('a');
@@ -50,7 +50,7 @@ describe('Tree', () => {
     expect(letters).toEqual(['a', 'b', 'c', 'd']);
   });
 
-  test('Can traverse DF', () => {
+  test.skip('Can traverse DF', () => {
     const letters = [];
     const t = new Tree();
     t.root = new Node('a');

@@ -1,31 +1,34 @@
 const Queue = require('./index');
 
-test('Queue is a class', () => {
-  expect(typeof Queue.prototype.constructor).toEqual('function');
-});
+describe.skip('Queue', () => {
+  it('Queue is a class', () => {
+    expect(typeof Queue.prototype.constructor).toEqual('function');
+  });
+  
+  it('can add elements to a queue', () => {
+    const q = new Queue();
+    expect(() => {
+      q.add(1);
+    }).not.toThrow();
+  });
 
-test('can add elements to a queue', () => {
-  const q = new Queue();
-  expect(() => {
+  it('can remove elements from a queue', () => {
+    const q = new Queue();
+    expect(() => {
+      q.add(1);
+      q.remove();
+    }).not.toThrow();
+  });
+  it('Order of elements is maintained', () => {
+    const q = new Queue();
     q.add(1);
-  }).not.toThrow();
-});
+    q.add(2);
+    q.add(3);
+    expect(q.remove()).toEqual(1);
+    expect(q.remove()).toEqual(2);
+    expect(q.remove()).toEqual(3);
+    expect(q.remove()).toEqual(undefined);
+  });
+})
 
-test('can remove elements from a queue', () => {
-  const q = new Queue();
-  expect(() => {
-    q.add(1);
-    q.remove();
-  }).not.toThrow();
-});
 
-test('Order of elements is maintained', () => {
-  const q = new Queue();
-  q.add(1);
-  q.add(2);
-  q.add(3);
-  expect(q.remove()).toEqual(1);
-  expect(q.remove()).toEqual(2);
-  expect(q.remove()).toEqual(3);
-  expect(q.remove()).toEqual(undefined);
-});

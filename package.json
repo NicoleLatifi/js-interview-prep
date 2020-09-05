@@ -1,0 +1,26 @@
+{
+  "name": "interview_prep",
+  "version": "1.0.0",
+  "jest": {
+    "verbose": true
+  },
+  "description": "Algo and whiteboarding exercises",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "jest": "^26.4.2"
+  },
+  "scripts": {
+    "test": "jest --config"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JoshSevy/js-interview-prep.git"
+  },
+  "author": "Joshua Sevy",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JoshSevy/js-interview-prep/issues"
+  },
+  "homepage": "https://github.com/JoshSevy/js-interview-prep#readme"
+}
