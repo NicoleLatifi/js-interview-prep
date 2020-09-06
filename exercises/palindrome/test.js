@@ -1,6 +1,6 @@
 const palindrome = require('./index');
 
-describe.skip('Palindrome', () => {
+describe('Palindrome', () => {
   it('palindrome function is defined', () => {
     expect(typeof palindrome).toEqual('function');
   });
