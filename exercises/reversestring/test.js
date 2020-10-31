@@ -1,14 +1,14 @@
-const reverse = require('./index');
+const { reverse, reverse2, reverse3 } = require('./index');
 
-describe.skip('Reverse String', () => {
+describe('Reverse String', () => {
   it('Reverse function exists', () => {
     expect(reverse).toBeDefined();
   });
-  
+
   it('Reverse reverses a string', () => {
     expect(reverse('abcd')).toEqual('dcba');
   });
-  
+
   it('Reverse reverses a string', () => {
     expect(reverse('  abcd')).toEqual('dcba  ');
   });
@@ -37,5 +37,3 @@ describe.skip('Reverse String', () => {
     expect(reverse3('  abcd')).toEqual('dcba  ');
   });
 })
-
-
